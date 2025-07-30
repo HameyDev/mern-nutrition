@@ -13,6 +13,8 @@ import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
 
 const App = () => {
   const location = useLocation();
@@ -27,12 +29,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/plans" element={<Plans />} />
-            <Route path="/plan/:id" element={<PlanDetail />} />
+            <Route path="/plans/:id" element={<PlanDetail />} />
             <Route path="/book" element={<Book />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </div>

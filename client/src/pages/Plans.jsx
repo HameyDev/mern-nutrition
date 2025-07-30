@@ -11,26 +11,26 @@ const Plans = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="min-h-screen px-4 py-16 bg-gradient-to-b from-green-50 via-white to-green-100"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-green-700 mb-10 mt-12">
+      <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-center text-green-700 mb-8 mt-14">
         Explore Our Diet Plans <span className="text-2xl">🥗</span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto bg-cream">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {plans.map((plan) => (
           <div
             key={plan.id}
-            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md overflow-hidden"
           >
             <img
               src={plan.image}
               alt={plan.title}
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-cover transform transition duration-500 hover:scale-105"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold text-green-700 mb-2 font-playfair">
                 {plan.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+              <p className="text-gray-600 text-sm mb-4 font-poppins leading-relaxed">
                 {plan.description}
               </p>
               <Link

@@ -19,7 +19,7 @@ const About = () => {
       <div className="absolute inset-0 bg-white/30 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center gap-10 mt-10">
+      <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center gap-10 mt-14">
 
         {/* Left Image */}
         <div className="w-full md:w-1/2">
@@ -32,19 +32,19 @@ const About = () => {
 
         {/* Right Text */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-playfair font-bold text-green-700 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-green-700 mb-4">
             Meet Your Nutrition Coach
           </h2>
 
-          <p className="text-gray-700 text-lg font-poppins mb-4 leading-relaxed">
+          <p className="text-gray-700 text-md md:text-lg font-poppins mb-4 leading-relaxed">
             Hi! I'm <span className="text-green-600 font-semibold">Laiba</span>, a certified nutritionist and wellness guide. I've helped 200+ people balance hormones, lose stubborn fat, gain energy, and fall in love with real food.
           </p>
 
-          <p className="text-gray-700 text-lg font-poppins mb-4 leading-relaxed">
+          <p className="text-gray-700 text-md md:text-lg  font-poppins mb-4 leading-relaxed">
             My journey began with my own struggles with PCOS and fatigue. Now I design simple, effective diet plans that actually work — no crash diets, just smart food choices.
           </p>
 
-          <p className="text-gray-700 text-lg font-poppins leading-relaxed">
+          <p className="text-gray-700 text-md md:text-lg  font-poppins leading-relaxed">
             Ready to transform your health? Let’s begin your journey together.
           </p>
 
