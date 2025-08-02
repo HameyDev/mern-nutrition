@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
       planCategory: plan.title, // so nutritionist knows which plan
     });
 
-    toast.success("✅ Diet Plan Request Sent!");
+    toast.success("Diet Plan Request Sent!");
     setFormData({
       name: "",
       email: "",

@@ -24,7 +24,7 @@ const Book = () => {
     try {
       const response = await axios.post("https://nutrition-backend-4wj5.onrender.com/api/consultation", formData);
 
-      toast.success("✅ Consultation Booked!");
+      toast.success("Consultation Booked!");
       setFormData({
         name: "",
         email: "",
