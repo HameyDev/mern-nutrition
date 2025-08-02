@@ -6,6 +6,7 @@ import {
   Clock3,
   Ban,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -33,7 +34,7 @@ const Footer = () => {
           <h4 className="text-green-300 font-semibold mb-3">Where to Find Us</h4>
           <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> Hostel City, Islamabad</p>
           <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> Royal Girls Hostel Branch 9, Islamabad</p>
-          <p className="text-white mt-1">🌐 Online Consultations Available</p>
+          <Link to="/admin"><p className="text-white mt-1">🌐 Online Consultations Available</p></Link>
         </div>
 
         {/* Talking Hours */}
