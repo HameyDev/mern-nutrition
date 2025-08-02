@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import plans from "../data/plans";
 import { useState } from "react";
 import axios from "../api/axios";
+import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+
 
 const PlanDetail = () => {
   const { id } = useParams();
@@ -37,34 +40,50 @@ const PlanDetail = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("/diet-requests", formData);
-      alert("✅ Your diet plan request has been submitted!");
-      setFormData({
-        name: "",
-        email: "",
-        age: "",
-        gender: "",
-        weight: "",
-        height: "",
-        activityLevel: "",
-        conditions: [],
-        allergies: "",
-        dietType: "",
-        duration: "",
-        message: "",
-      });
-    } catch (err) {
-      console.error("Failed to Submit:", err);
-    }
-  };
+ // at top
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await axios.post("http://localhost:5000/api/diet", {
+      ...formData,
+      planId: id,
+      planCategory: plan.title, // so nutritionist knows which plan
+    });
+
+    toast.success("✅ Diet Plan Request Sent!");
+    setFormData({
+      name: "",
+      email: "",
+      age: "",
+      gender: "",
+      weight: "",
+      height: "",
+      activityLevel: "",
+      conditions: [],
+      allergies: "",
+      dietType: "",
+      duration: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error("❌ Diet form error:", error.message);
+    toast.error(err?.response?.data?.message || "Something went wrong");
+  }
+};
+
 
   if (!plan) return <div className="p-10 text-red-500">Plan not found.</div>;
 
   return (
-    <div className="px-4 md:px-8 py-12 max-w-5xl mx-auto mt-14">
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="px-4 md:px-8 py-12 max-w-5xl mx-auto mt-14"
+    >
       {/* Plan Info */}
       <div className="mb-10 mt-12">
         <img
@@ -235,7 +254,7 @@ const PlanDetail = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

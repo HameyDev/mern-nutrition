@@ -24,15 +24,15 @@ const Footer = () => {
         <div>
           <h4 className="text-green-300 font-semibold mb-3">Contact</h4>
           <p className="flex items-center gap-2 mb-1"><Phone size={16} /> <span className="text-white">+92 300 1234567</span></p>
-          <p className="flex items-center gap-2 mb-1"><Mail size={16} /> <span className="text-white">support@nutricare.com</span></p>
+          <p className="flex items-center gap-2 mb-1"><Mail size={16} /> <span className="text-white">laibatahir.nutritionist@gmail.com</span></p>
           <p className="flex items-center gap-2"><MessageSquareText size={16} /> <span className="text-white">WhatsApp: +92 300 7654321</span></p>
         </div>
 
         {/* Location */}
         <div>
           <h4 className="text-green-300 font-semibold mb-3">Where to Find Us</h4>
-          <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> Gulberg, Lahore</p>
-          <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> DHA Phase 5, Lahore</p>
+          <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> Hostel City, Islamabad</p>
+          <p className="flex items-center gap-2 mb-1"><MapPin size={16} /> Royal Girls Hostel Branch 9, Islamabad</p>
           <p className="text-white mt-1">🌐 Online Consultations Available</p>
         </div>
 
@@ -48,7 +48,6 @@ const Footer = () => {
       {/* Bottom */}
       <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-gray-400">
         <p>© {new Date().getFullYear()} <span className="text-white font-semibold">NutriCare by Laiba</span>. All rights reserved.</p>
-        <p className="mt-1">Built with 💚 using React + Tailwind CSS</p>
       </div>
     </footer>
   );

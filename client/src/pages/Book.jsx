@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "../api/axios";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const Book = () => {
   const [formData, setFormData] = useState({
@@ -19,9 +20,11 @@ const Book = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      await axios.post("/consultations", formData);
-      alert("Your consultation booking has been submitted!");
+      const response = await axios.post("http://localhost:5000/api/consultation", formData);
+
+      toast.success("✅ Consultation Booked!");
       setFormData({
         name: "",
         email: "",
@@ -31,10 +34,10 @@ const Book = () => {
         issue: "",
         message: "",
       });
-  } catch (err) {
-    console.error("❌ Failed to submit:", err);
-    alert("Something went wrong. Please try again.");
-  }
+    } catch (error) {
+      console.error("❌ Consultation form error:", error.message);
+      toast.error(err?.response?.data?.message || "Something went wrong");
+    }
   };
 
   return (

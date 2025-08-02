@@ -1,7 +1,7 @@
 const plans = [
   {
-    id: "weight-loss-7day",
-    title: "7-Day Weight Loss Plan",
+    id: "weight-loss",
+    title: "Weight Loss Plan",
     image: "/plan1.jpg", // save inside public/images/
     description: "Lose weight naturally with balanced meals over 7 days.",
   },
