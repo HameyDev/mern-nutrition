@@ -22,8 +22,8 @@ const AdminDashboard = () => {
     const fetchData = async () => {
       try {
         const [dietRes, consultRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/diet/"),
-          axios.get("http://localhost:5000/api/consultation/"),
+          axios.get("https://nutrition-backend-4wj5.onrender.com/api/diet/"),
+          axios.get("https://nutrition-backend-4wj5.onrender.com/api/consultation/"),
         ]);
         setDietRequests(dietRes.data);
         setConsultations(consultRes.data);

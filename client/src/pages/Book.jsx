@@ -22,7 +22,7 @@ const Book = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/consultation", formData);
+      const response = await axios.post("https://nutrition-backend-4wj5.onrender.com/api/consultation", formData);
 
       toast.success("✅ Consultation Booked!");
       setFormData({

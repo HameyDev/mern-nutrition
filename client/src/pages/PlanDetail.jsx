@@ -46,7 +46,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post("http://localhost:5000/api/diet", {
+    const response = await axios.post("https://nutrition-backend-4wj5.onrender.com/api/diet", {
       ...formData,
       planId: id,
       planCategory: plan.title, // so nutritionist knows which plan
