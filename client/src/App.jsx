@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
       <Navbar />
       
