@@ -20,7 +20,7 @@ const Home = () => {
         {/* Girlfriend Picture */}
         <div className="mb-4 mt-10 mr-2 flex items-center justify-center ">
           <img
-            src="/girl.jpeg"
+            src="/girl.png"
             alt="Laiba"
             className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg object-cover hover:scale-105 transition duration-500"
           />
